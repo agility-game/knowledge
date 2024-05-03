@@ -1,7 +1,7 @@
-repository-name
-# Repository Name
+knowledge
+# Knowledge
 
-Based on "ABC" at https://www.abc.com/
+Based on "Functional Data Grid" at https://github.com/energydrink9/functional-data-grid
 
 ## 100 - Introduction
 
