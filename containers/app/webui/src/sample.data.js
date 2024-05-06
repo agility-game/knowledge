@@ -1,4 +1,5 @@
 // See also https://stackoverflow.com/questions/37302958/d3-sankey-minimize-link-crossing
+// For classes of icons, see https://fontawesome.com/v5/icons/smile?f=classic&s=solid
 
 const Data_prod = {
   nodes: [
