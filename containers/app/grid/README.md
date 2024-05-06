@@ -88,9 +88,8 @@ To use Functional Data Grid, you have to import the library and its base types y
 
 ```
 ...
-import FunctionalDataGrid, { Column, Group } from 'functional-data-grid'
+import FunctionalDataGrid, { Column, Group } from 'functional-data-grid';
 ...
-
 ```
 containers/app/grid/App.js
 
@@ -175,3 +174,41 @@ If you get the error: ```...```, then update following entry in package.json:
 package.json
 
 And try again running the start command.
+
+If you receive an error: ```cannot find module xxx``` use below solution:
+
+To resolve this issue in the latest React 18.2.0 version.
+
+You first need to install "crypto-browserify", "biuffer", and "stream-browserify".
+
+Use this command to install these missing *replacement* modules:
+
+```
+$ cd containers/app/grid
+$ npm install crypto-browserify buffer stream-browserify --legal-peer-deps
+```
+
+After the installation go to "webpack.config.js".
+
+You will find this file in the node_modules > react-scripts > config > webpack.config.js.
+
+Inside webpack.config.js, add the following inside ```return{}```:
+
+```
+return {
+      ...
+      fallback: {
+        crypto: require.resolve('crypto-browserify'),
+        buffer: require.resolve('buffer/'),
+        stream: require.resolve('stream-browserify'),
+      }
+      ...
+}      
+```      
+
+Save the file and build and run your project.
+
+```
+$ npm run build
+$ npm start
+```
