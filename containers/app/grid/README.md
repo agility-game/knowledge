@@ -213,3 +213,25 @@ Save the file and build and run your project.
 $ npm run build
 $ npm start
 ```
+
+Or use yarn:
+
+```
+$ yarn global add serve
+$ serve -s build
+```
+
+You will be prompted as follows (in case port 3000 is already in use):
+
+   ┌──────────────────────────────────────────────────┐
+   │                                                  │
+   │   Serving!                                       │
+   │                                                  │
+   │   - Local:    http://localhost:38251             │
+   │   - Network:  http://10.0.5.2:38251              │
+   │                                                  │
+   │   This port was picked because 3000 is in use.   │
+   │                                                  │
+   └──────────────────────────────────────────────────┘
+
+Follow the above links in the browser to see your page.   
