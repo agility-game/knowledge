@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import FunctionalDataGrid, { Column, Group, Sort, filterRenderers, utils, ColumnGroup } from 'functional-data-grid';
-import shows from './resources/shows.json'
+import knowledge from './resources/data.json'
 import './App.css';
 
 const AggregatesCalculators = utils.AggregatesCalculators
@@ -172,7 +172,7 @@ export default class App extends Component {
     }
   }
 
-  getData = () => shows
+  getData = () => knowledge
 
   getRatingColor = (rating) => rating >= 6 ? '#4caf50' : '#F44336'
 }
