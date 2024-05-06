@@ -17,18 +17,18 @@ const Data_prod = {
     //{ name: "F", color: "cyan", url: "https://www.google.com/search?q=F" },
     //{ name: "G", color: "yellow", url: "https://www.google.com/search?q=G" },
     // { name: "Build Bamboo Plan Worker", color: "blue", url: ":8080" },   
-    { name: "Parts", color: "orange", url: ":8091" },
-    { name: "Products", color: "purple", url: ":7080" },
-    { name: "Customers", color: "green", url: ":1436" },
-    { name: "Employees", color: "violet", url: ":50" },
-    { name: "People", color: "cyan", url: ":6000" },
-    { name: "Suppliers", color: "yellow", url: ":6000" },
-    { name: "Purposes", color: "orange", url: ":6000" },
-    { name: "Practices", color: "cyan", url: ":6000" },
-    { name: "Principles", color: "green", url: ":6000" },
-    { name: "Architecture", color: "orange", url: ":6000" },
-    { name: "Engineering", color: "purple", url: ":6000" },
-    { name: "Processes", color: "green", url: ":6000" }
+    { name: "Parts", color: "orange", url: "/grid?type=parts" },
+    { name: "Products", color: "purple", url: "/grid?type=products" },
+    { name: "Customers", color: "green", url: "/grid?type=customers" },
+    { name: "Employees", color: "violet", url: "/grid?type=employees" },
+    { name: "People", color: "cyan", url: "/grid?type=people" },
+    { name: "Suppliers", color: "yellow", url: "/grid?type=suppliers" },
+    { name: "Purposes", color: "orange", url: "/grid?type=purposes" },
+    { name: "Practices", color: "cyan", url: "/grid?type=practices" },
+    { name: "Principles", color: "green", url: "/grid?type=principles" },
+    { name: "Architecture", color: "orange", url: "/grid?type=architecture" },
+    { name: "Engineering", color: "purple", url: "/grid?type=engineering" },
+    { name: "Processes", color: "green", url: "/grid?type=processes" }
     // level 4    
   ],
   links: [
@@ -46,7 +46,8 @@ const Data_prod = {
     { source: "Heart", target: "Practices", value: 100 },
     { source: "Heart", target: "Principles", value: 100 },
     { source: "Arrows", target: "Architecture", value: 100 },
-    { source: "Arrows", target: "Engineering", value: 100 }
+    { source: "Arrows", target: "Engineering", value: 100 },
+    { source: "Arrows", target: "Processes", value: 100 }
   ],
   units: "TWh"
 };
@@ -68,17 +69,18 @@ const Data_dev = {
     //{ name: "F", color: "cyan", url: "https://www.google.com/search?q=F" },
     //{ name: "G", color: "yellow", url: "https://www.google.com/search?q=G" },
     // { name: "Build Bamboo Plan Worker", color: "blue", url: ":8080" },   
-    { name: "Parts", color: "orange", url: ":8091" },
-    { name: "Products", color: "purple", url: ":7080" },
-    { name: "Customers", color: "green", url: ":1436" },
-    { name: "Employees", color: "violet", url: ":5080" },
-    { name: "People", color: "cyan", url: ":6001" },
-    { name: "Suppliers", color: "yellow", url: ":6001" },
-    { name: "Purposes", color: "orange", url: ":6001" },
-    { name: "Practices", color: "cyan", url: ":6001" },
-    { name: "Principles", color: "green", url: ":6001" },
-    { name: "Architecture", color: "orange", url: ":6001" },
-    { name: "Engineering", color: "purple", url: ":6001" }
+    { name: "Parts", color: "orange", url: "/grid?type=parts" },
+    { name: "Products", color: "purple", url: "/grid?type=products" },
+    { name: "Customers", color: "green", url: "/grid?type=customers" },
+    { name: "Employees", color: "violet", url: "/grid?type=employees" },
+    { name: "People", color: "cyan", url: "/grid?type=people" },
+    { name: "Suppliers", color: "yellow", url: "/grid?type=suppliers" },
+    { name: "Purposes", color: "orange", url: "/grid?type=purposes" },
+    { name: "Practices", color: "cyan", url: "/grid?type=practices" },
+    { name: "Principles", color: "green", url: "/grid?type=principles" },
+    { name: "Architecture", color: "orange", url: "/grid?type=architecture" },
+    { name: "Engineering", color: "purple", url: "/grid?type=engineering" },
+    { name: "Processes", color: "green", url: "/grid?type=processes" }
     // level 4    
   ],
   links: [
@@ -96,7 +98,8 @@ const Data_dev = {
     { source: "Heart", target: "Practices", value: 100 },
     { source: "Heart", target: "Principles", value: 100 },
     { source: "Arrows", target: "Architecture", value: 100 },
-    { source: "Arrows", target: "Engineering", value: 100 }
+    { source: "Arrows", target: "Engineering", value: 100 },
+    { source: "Arrows", target: "Processes", value: 100 }
   ],
   units: "TWh"
 };
