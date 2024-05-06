@@ -21,7 +21,8 @@ const Data_prod = {
     { name: "Products", color: "purple", url: ":7080" },
     { name: "Customers", color: "green", url: ":1436" },
     { name: "Employees", color: "violet", url: ":50" },
-    { name: "People", color: "cyan", url: ":6000" }
+    { name: "People", color: "cyan", url: ":6000" },
+    { name: "Suppliers", color: "yellow", url: ":6000" }
     // level 4    
   ],
   links: [
@@ -33,7 +34,8 @@ const Data_prod = {
     { source: "Box", target: "Products", value: 100 },
     { source: "Smiley", target: "Customers", value: 100 },
     { source: "Smiley", target: "Employees", value: 100 },
-    { source: "Smiley", target: "People", value: 100 }  
+    { source: "Smiley", target: "People", value: 100 },
+    { source: "Smiley", target: "Suppliers", value: 100 }  
   ],
   units: "TWh"
 };
@@ -59,7 +61,8 @@ const Data_dev = {
     { name: "Products", color: "purple", url: ":7080" },
     { name: "Customers", color: "green", url: ":1436" },
     { name: "Employees", color: "violet", url: ":5080" },
-    { name: "People", color: "cyan", url: ":6001" } 
+    { name: "People", color: "cyan", url: ":6001" },
+    { name: "Suppliers", color: "yellow", url: ":6001" } 
     // level 4    
   ],
   links: [
@@ -71,8 +74,8 @@ const Data_dev = {
     { source: "Box", target: "Products", value: 100 },
     { source: "Smiley", target: "Customers", value: 100 },
     { source: "Smiley", target: "Employees", value: 100 },
-    { source: "Smiley", target: "People", value: 100 }
-    // { source: "Agility Game Knowledge (dev)", target: "Knowledge Management (KM)", value: 100 }
+    { source: "Smiley", target: "People", value: 100 },
+    { source: "Smiley", target: "Suppliers", value: 100 }
   ],
   units: "TWh"
 };
