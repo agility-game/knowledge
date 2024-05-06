@@ -57,6 +57,33 @@ services:
     networks:
       - gateway-dev         
 
+  cards:
+    build:
+      context: ./cards
+      dockerfile: Dockerfile.dev
+      args: # from env_file
+        IMAGE_REPOSITORY: ${IMAGE_REPOSITORY}
+        IMAGE_REPOSITORY_DIVISION: ${IMAGE_REPOSITORY_DIVISION}
+        PROXY_USER: ${PROXY_USER}
+        PROXY_PASSWORD: ${PROXY_PASSWORD}
+        PROXY_FQDN: ${PROXY_FQDN}
+        PROXY_PORT: ${PROXY_PORT}
+    env_file:
+      - .env
+    container_name: ${UNIQUE_NAMESPACE}-cards-dev
+    privileged: true    
+    security_opt:
+      - no-new-privileges:true     
+    ports:
+      - "8083:3003"
+    volumes:
+      - ./grid:/app
+      - /app/node_modules
+    environment:
+      - CHOKIDAR_USEPULLING=true
+    networks:
+      - gateway-dev
+
   gateway:
     build:
       context: ./gateway
@@ -90,6 +117,7 @@ services:
     external_links:
       - agility-game-knowledge-webui-dev
       - agility-game-knowledge-grid-dev
+      - agility-game-knowledge-cards-dev
 
 # see https://stackoverflow.com/questions/45255066/create-networks-automatically-in-docker-compose
 networks:

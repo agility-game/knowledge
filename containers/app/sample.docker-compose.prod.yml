@@ -47,6 +47,28 @@ services:
     networks:
       - gateway-prod
 
+  cards:
+    build:
+      context: ./cards
+      dockerfile: Dockerfile.prod
+      args: # from env_file
+        IMAGE_REPOSITORY: ${IMAGE_REPOSITORY}
+        IMAGE_REPOSITORY_DIVISION: ${IMAGE_REPOSITORY_DIVISION}
+        PROXY_USER: ${PROXY_USER}
+        PROXY_PASSWORD: ${PROXY_PASSWORD}
+        PROXY_FQDN: ${PROXY_FQDN}
+        PROXY_PORT: ${PROXY_PORT}
+    env_file:
+      - .env      
+    container_name: ${UNIQUE_NAMESPACE}-cards-prod
+    privileged: true    
+    security_opt:
+      - no-new-privileges:true      
+    ports:
+      - "9096:3003"
+    networks:
+      - gateway-prod
+
   gateway:
     build:
       context: ./gateway
@@ -75,6 +97,7 @@ services:
     external_links:
       - agility-game-knowledge-webui-prod
       - agility-game-knowledge-grid-prod
+      - agility-game-knowledge-cards-prod
 
 # see https://stackoverflow.com/questions/45255066/create-networks-automatically-in-docker-compose
 networks:
