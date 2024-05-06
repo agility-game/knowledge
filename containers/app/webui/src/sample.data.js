@@ -10,7 +10,7 @@ const Data_prod = {
     //{ name: "D", color: "green", url: "https://www.google.com/search?q=D" },
     //{ name: "E", color: "purple", url: "https://www.google.com/search?q=E" },
     { name: "Box", color: "green", url: "/box" },
-    { name: "Smiley", color: "orange", url: "/smiley" },
+    { class: "fas fa-smile", name: "Smiley", color: "orange", url: "/smiley" },
     { name: "Heart", color: "purple", url: "/heart" },
     { name: "Arrows", color: "yellow", url: "/arrows" },
     // level 3
@@ -62,7 +62,7 @@ const Data_dev = {
     //{ name: "D", color: "green", url: "https://www.google.com/search?q=D" },
     //{ name: "E", color: "purple", url: "https://www.google.com/search?q=E" },
     { name: "Box", color: "green", url: "/box" },
-    { name: "Smiley", color: "orange", url: "/smiley" },
+    { class: "fas fa-smile", name: "Smiley", color: "orange", url: "/smiley" },
     { name: "Heart", color: "purple", url: "/heart" },
     { name: "Arrows", color: "yellow", url: "/arrows" },
     // level 3
