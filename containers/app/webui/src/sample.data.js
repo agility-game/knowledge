@@ -24,7 +24,8 @@ const Data_prod = {
     { name: "People", color: "cyan", url: ":6000" },
     { name: "Suppliers", color: "yellow", url: ":6000" },
     { name: "Purposes", color: "orange", url: ":6000" },
-    { name: "Practices", color: "purple", url: ":6000" }
+    { name: "Practices", color: "cyan", url: ":6000" },
+    { name: "Principles", color: "green", url: ":6000" }
     // level 4    
   ],
   links: [
@@ -39,7 +40,8 @@ const Data_prod = {
     { source: "Smiley", target: "People", value: 100 },
     { source: "Smiley", target: "Suppliers", value: 100 },
     { source: "Heart", target: "Purposes", value: 100 },
-    { source: "Heart", target: "Practices", value: 100 }
+    { source: "Heart", target: "Practices", value: 100 },
+    { source: "Heart", target: "Principles", value: 100 }
   ],
   units: "TWh"
 };
@@ -68,7 +70,8 @@ const Data_dev = {
     { name: "People", color: "cyan", url: ":6001" },
     { name: "Suppliers", color: "yellow", url: ":6001" },
     { name: "Purposes", color: "orange", url: ":6001" },
-    { name: "Practices", color: "purple", url: ":6001" }
+    { name: "Practices", color: "cyan", url: ":6001" },
+    { name: "Principles", color: "green", url: ":6001" }
     // level 4    
   ],
   links: [
@@ -83,7 +86,8 @@ const Data_dev = {
     { source: "Smiley", target: "People", value: 100 },
     { source: "Smiley", target: "Suppliers", value: 100 },
     { source: "Heart", target: "Purposes", value: 100 },
-    { source: "Heart", target: "Practices", value: 100 }
+    { source: "Heart", target: "Practices", value: 100 },
+    { source: "Heart", target: "Principles", value: 100 }
   ],
   units: "TWh"
 };
