@@ -179,13 +179,13 @@ If you receive an error: ```cannot find module xxx``` use below solution:
 
 To resolve this issue in the latest React 18.2.0 version.
 
-You first need to install "crypto-browserify", "biuffer", and "stream-browserify".
+You first need to install "crypto-browserify", "biuffer", "stream-browserify", and 'vm-browserify".
 
 Use this command to install these missing *replacement* modules:
 
 ```
 $ cd containers/app/grid
-$ npm install crypto-browserify buffer stream-browserify --legal-peer-deps
+$ npm install crypto-browserify buffer stream-browserify vm-browserify --legal-peer-deps
 ```
 
 After the installation go to "webpack.config.js".
@@ -201,6 +201,7 @@ return {
         crypto: require.resolve('crypto-browserify'),
         buffer: require.resolve('buffer/'),
         stream: require.resolve('stream-browserify'),
+        vm: require.resolve('vm-browserify'),
       }
       ...
 }      
