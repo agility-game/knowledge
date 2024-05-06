@@ -18,8 +18,8 @@ const Data_prod = {
     //{ name: "G", color: "yellow", url: "https://www.google.com/search?q=G" },
     // { name: "Build Bamboo Plan Worker", color: "blue", url: ":8080" },   
     { name: "Parts", color: "orange", url: ":8091" },
-    { name: "Products", color: "purple", url: ":7080" }
-    // { name: "Content Management Systems (CMS)", color: "green", url: ":1436" },
+    { name: "Products", color: "purple", url: ":7080" },
+    { name: "Customers", color: "green", url: ":1436" }
     // { name: "Infrastructure Management (IM)", color: "violet", url: ":50" },
     //{ name: "Knowledge Management (KM)", color: "cyan", url: ":6000" }
     // level 4    
@@ -30,8 +30,8 @@ const Data_prod = {
     { source: "Agility Game Knowledge", target: "Heart", value: 100 },
     { source: "Agility Game Knowledge", target: "Arrows", value: 100 },
     { source: "Box", target: "Parts", value: 100 },
-    { source: "Box", target: "Products", value: 100 }
-    // { source: "Agility Game Knowledge", target: "Products", value: 100 },
+    { source: "Box", target: "Products", value: 100 },
+    { source: "Smiley", target: "Customers", value: 100 }
     // { source: "Agility Game Knowledge", target: "Infrastructure Management (IM)", value: 100 },
     // { source: "Agility Game Knowledge", target: "Knowledge Management (KM)", value: 100 }  
   ],
@@ -56,8 +56,8 @@ const Data_dev = {
     //{ name: "G", color: "yellow", url: "https://www.google.com/search?q=G" },
     // { name: "Build Bamboo Plan Worker", color: "blue", url: ":8080" },   
     { name: "Parts", color: "orange", url: ":8091" },
-    { name: "Products", color: "purple", url: ":7080" }
-    // { name: "Content Management Systems (CMS)", color: "green", url: ":1436" },
+    { name: "Products", color: "purple", url: ":7080" },
+    { name: "Customers", color: "green", url: ":1436" }
     // { name: "Infrastructure Management (IM)", color: "violet", url: ":5080" },
     // { name: "Knowledge Management (KM)", color: "cyan", url: ":6001" } 
     // level 4    
@@ -68,8 +68,8 @@ const Data_dev = {
     { source: "Agility Game Knowledge", target: "Heart", value: 100 },
     { source: "Agility Game Knowledge", target: "Arrows", value: 100 },
     { source: "Box", target: "Parts", value: 100 },
-    { source: "Box", target: "Products", value: 100 }
-    // { source: "Agility Game Knowledge (dev)", target: "Chat", value: 100 },
+    { source: "Box", target: "Products", value: 100 },
+    { source: "Smiley", target: "Customers", value: 100 }
     // { source: "Agility Game Knowledge (dev)", target: "Content Management Systems (CMS)", value: 100 },
     // { source: "Agility Game Knowledge (dev)", target: "Infrastructure Management (IM)", value: 100 },
     // { source: "Agility Game Knowledge (dev)", target: "Knowledge Management (KM)", value: 100 }
