@@ -6,13 +6,6 @@ import './App.css';
 const AggregatesCalculators = utils.AggregatesCalculators
 const SelectFilter = filterRenderers.SelectFilter
 
-
-class MyGrid extends React.Component {
-
-  render = () => <FunctionalDataGrid columns={columns} data={data} />
-
-}
-
 export default class App extends Component {
 
   render = () => <FunctionalDataGrid

@@ -28,7 +28,34 @@ services:
     environment:
       - CHOKIDAR_USEPULLING=true
     networks:
-      - gateway-dev      
+      - gateway-dev    
+
+  grid:
+    build:
+      context: ./grid
+      dockerfile: Dockerfile.dev
+      args: # from env_file
+        IMAGE_REPOSITORY: ${IMAGE_REPOSITORY}
+        IMAGE_REPOSITORY_DIVISION: ${IMAGE_REPOSITORY_DIVISION}
+        PROXY_USER: ${PROXY_USER}
+        PROXY_PASSWORD: ${PROXY_PASSWORD}
+        PROXY_FQDN: ${PROXY_FQDN}
+        PROXY_PORT: ${PROXY_PORT}
+    env_file:
+      - .env
+    container_name: ${UNIQUE_NAMESPACE}-grid-dev
+    privileged: true    
+    security_opt:
+      - no-new-privileges:true     
+    ports:
+      - "8082:3002"
+    volumes:
+      - ./grid:/app
+      - /app/node_modules
+    environment:
+      - CHOKIDAR_USEPULLING=true
+    networks:
+      - gateway-dev         
 
   gateway:
     build:
@@ -62,6 +89,7 @@ services:
       - gateway-dev
     external_links:
       - agility-game-knowledge-webui-dev
+      - agility-game-knowledge-grid-dev
 
 # see https://stackoverflow.com/questions/45255066/create-networks-automatically-in-docker-compose
 networks:
